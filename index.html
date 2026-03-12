@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ayanda Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FFF0F5;
+color:#333;
+line-height:1.6;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:flex-end;
+padding:25px 10%;
+background:white;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff8fb1;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:80px 10%;
+background:#FFF0F5;
+}
+
+.hero-text h1{
+font-size:42px;
+font-weight:600;
+}
+
+.hero-text span{
+color:#ff8fb1;
+}
+
+.hero-text p{
+margin-top:15px;
+font-size:18px;
+}
+
+.hero-img{
+display:flex;
+justify-content:center;
+align-items:flex-end;
+height:420px;
+}
+
+.hero-img img{
+width:460px;
+max-width:100%;
+position:relative;
+bottom:-40px;
+}
+
+/* SKILLS BAR */
+
+.skills{
+background:#FFD1DC;
+padding:25px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+font-size:18px;
+}
+
+.skill{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:500;
+}
+
+.skill i{
+font-size:22px;
+color:black;
+}
+
+/* PROJECTS */
+
+.projects{
+padding:80px 10%;
+background:white;
+}
+
+.projects h2{
+text-align:center;
+font-family:'Dancing Script',cursive;
+font-size:48px;
+margin-bottom:60px;
+}
+
+/* GRID */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+/* CARD */
+
+.card{
+background:#FFF0F5;
+border-radius:12px;
+overflow:hidden;
+transition:0.35s;
+display:flex;
+flex-direction:column;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* IMAGE */
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+.project-video{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+/* CARD CONTENT */
+
+.card-content{
+padding:20px;
+display:flex;
+flex-direction:column;
+flex-grow:1;
+}
+
+.tag{
+display:inline-block;
+background:#ffb6c1;
+padding:5px 15px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:10px;
+width:max-content;
+}
+
+.card-content p{
+flex-grow:1;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+
+.case-btn{
+border:none;
+background:#ff8fb1;
+color:white;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.case-btn:hover{
+background:#ff6c9a;
+}
+
+/* CTA */
+
+.cta{
+background:#FFF0F5;
+text-align:center;
+padding:80px 20px;
+}
+
+.cta h2{
+font-size:36px;
+margin-bottom:30px;
+}
+
+.cta-btn{
+width:150px;
+height:150px;
+border-radius:50%;
+background:black;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+font-size:18px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.cta-btn:hover{
+transform:scale(1.3);
+}
+
+/* FOOTER */
+
+footer{
+background:#FFD1DC;
+padding:40px;
+text-align:center;
+}
+
+footer .social{
+margin-bottom:15px;
+}
+
+footer a{
+margin:0 10px;
+color:black;
+font-size:22px;
+text-decoration:none;
+}
+
+footer a:hover{
+opacity:0.6;
+}
+
+footer p{
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.project-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.project-grid{
+grid-template-columns:1fr;
+}
+
+nav{
+justify-content:center;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+<a href="resume.html">Resume</a>
+<a href="about.html">About me</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Hi there I'm <span>Ayanda</span></h1>
+<p>I am a UI UX designer and web developer.</p>
+</div>
+
+<div class="hero-img">
+<img src="images/hero.png" alt="character illustration">
+</div>
+
+</section>
+
+
+<!-- SKILLS BAR -->
+
+<section class="skills">
+
+<div class="skill">
+<i class="fa-brands fa-figma"></i>
+Figma
+</div>
+
+<div class="skill">
+<i class="fa-brands fa-html5"></i>
+HTML
+</div>
+
+<div class="skill">
+<i class="fa-brands fa-css3-alt"></i>
+CSS
+</div>
+
+<div class="skill">
+<i class="fa-brands fa-js"></i>
+JavaScript
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects">
+
+<h2>My Projects</h2>
+
+<div class="project-grid">
+
+
+<div class="card">
+
+<img src="images/hp-khy.png">
+
+<div class="card-content">
+
+<span class="tag">UI Design</span>
+
+<p>Luxury beauty brand website designed in Figma with a minimal princess aesthetic.</p>
+
+<a href="khy.html"><button class="case-btn">View Case Study</button></a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+    <video autoplay muted loop playsinline class="project-video">
+        <source src="videos/landing.mp4" type="video/mp4">
+        </video>
+        
+
+<div class="card-content">
+
+<span class="tag">Web Development</span>
+
+<p>Fully responsive landing page coded with HTML, CSS and JavaScript.</p>
+
+<a href="saas.html"><button class="case-btn">View Case Study</button></a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="images/ca-hp.png">
+
+<div class="card-content">
+
+<span class="tag">Mobile App</span>
+
+<p>Wellness mobile app focused on calm productivity and self care.</p>
+
+<a href="calmora.html"><button class="case-btn">View Case Study</button></a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Got a project?</h2>
+
+<div class="cta-btn">
+Get in touch
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="social">
+
+    <a href="https://github.com/PrincessJessie-hue"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/ayanda-mthombeni-757810340/"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="contact.html">Contact Me</a>
+
+</div>
+
+<p>© 2026 Ayanda. Built by Ayanda.</p>
+
+</footer>
+
+
+</body>
+</html>

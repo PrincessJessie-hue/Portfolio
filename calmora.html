@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobile Wellness App Case Study</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#ffffffdc;
+color:#333;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgb(255, 255, 255);
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* LOGO CONTROL */
+
+.logo img{
+max-height:50px;
+width:auto;
+display:block;
+}
+.logo{
+font-weight:600;
+font-size:20px;
+text-decoration:none;
+color:black;
+margin-right:auto;
+}
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#ff8fb1;
+}
+
+/* HERO */
+
+.case-banner{
+background:#ffffff;
+padding:100px 10%;
+}
+
+.banner-grid{
+display:grid;
+grid-template-columns:1fr 550px;
+gap:70px;
+align-items:center;
+}
+
+.banner-left h1{
+font-size:44px;
+margin-bottom:30px;
+}
+
+.case-info{
+display:flex;
+gap:60px;
+flex-wrap:wrap;
+font-size:14px;
+}
+
+/* VIDEO BLOCK */
+
+.banner-right{
+display:flex;
+justify-content:center;
+}
+
+.video-block{
+background:black;
+padding:18px;
+border-radius:16px;
+max-width:550px;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* VIDEO FIX */
+
+.video-block video{
+width:100%;
+height:auto;
+max-height:500px;
+object-fit:contain;
+border-radius:10px;
+}
+
+/* CASE SECTIONS */
+
+.case-container{
+display:grid;
+grid-template-columns:240px 1fr;
+gap:60px;
+padding:80px 10%;
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.case-title{
+font-weight:600;
+border-right:1px solid #eee;
+padding-right:30px;
+}
+
+.case-content p{
+max-width:720px;
+margin-bottom:20px;
+}
+
+/* PROCESS */
+
+.process{
+display:flex;
+gap:40px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.circle{
+width:110px;
+height:110px;
+border-radius:50%;
+background:black;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+font-size:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE BLOCK */
+
+.image-placeholder{
+width:100%;
+background:#ffffff;
+border-radius:12px;
+margin-top:20px;
+padding:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* IMAGE FIX */
+
+.image-placeholder img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+/* FINAL SCREENS */
+
+.screen{
+margin-top:40px;
+}
+
+.screen h3{
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#fff1f9f3;
+padding:40px;
+text-align:center;
+}
+
+footer a{
+margin:0 10px;
+color:black;
+font-size:20px;
+text-decoration:none;
+}
+
+footer p{
+margin-top:10px;
+font-size:14px;
+}
+.case-container {
+  padding: 40px 10%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.case-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.case-content h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.case-content h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #000000cf;
+}
+
+.observation {
+  margin-bottom: 25px;
+}
+
+.observation p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.need-feature {
+  margin-bottom: 20px;
+}
+
+.need-feature p:first-child {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.need-feature p:last-child {
+  margin-left: 15px;
+  color: #444;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.banner-grid{
+grid-template-columns:1fr;
+}
+
+.video-block{
+max-width:100%;
+}
+
+.case-container{
+grid-template-columns:1fr;
+}
+
+.case-title{
+border-right:none;
+border-bottom:1px solid #eee;
+padding-bottom:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="nav">
+
+<div class="logo">
+    <a href="index.html" class="logo">Yanda</a>
+</div>
+
+<div class="nav-links">
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="case-banner">
+
+<div class="banner-grid">
+
+<div class="banner-left">
+
+<h1>Mobile Wellness App</h1>
+
+<div class="case-info">
+
+<div>
+<strong>Responsibilities</strong><br>
+UX Research<br>
+UI Design<br>
+Prototyping
+</div>
+
+<div>
+<strong>Tools</strong><br>
+Figma
+</div>
+
+<div>
+<strong>Research</strong><br>
+User Interviews<br>
+Surveys
+</div>
+
+</div>
+
+</div>
+
+<div class="banner-right">
+
+<div class="video-block">
+
+<video autoplay muted loop playsinline>
+
+<source src="videos/Screen Recording 2026-03-09 at 16.01.27.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section class="case-container">
+
+<div class="case-title">Project Overview</div>
+
+<div class="case-content">
+
+<p>
+    Calmora is a mindfulness and relaxation app designed to help users manage stress through guided meditation, breathing exercises, and mood tracking. Many people struggle with stress but find existing meditation apps overwhelming or difficult to use. This project explores a simple and user-friendly solution to encourage mindfulness in daily life.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEM -->
+
+<section class="case-container">
+
+<div class="case-title">Problem Statement</div>
+
+<div class="case-content">
+
+<p>
+Many users struggle to maintain daily wellness habits due to busy schedules and lack of guidance.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- GOALS -->
+
+<section class="case-container">
+
+<div class="case-title">Goals</div>
+
+<div class="case-content">
+
+<p>
+Design an intuitive mobile app that encourages consistent wellness routines and promotes mental well-being.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="case-container">
+
+<div class="case-title">Process</div>
+
+<div class="case-content">
+
+<div class="process">
+
+<div class="circle">Understand</div>
+
+<div class="circle">Define</div>
+
+<div class="circle">Ideate</div>
+
+<div class="circle">Design</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- USER RESEARCH -->
+
+<section class="case-container">
+
+<div class="case-title">User Research</div>
+
+<div class="case-content">
+
+<h4>User Persona 1</h4>
+
+<div class="image-placeholder">
+<img src="images/persona 1.png">
+</div>
+
+<h4>User Persona 2</h4>
+
+<div class="image-placeholder">
+<img src="images/persona 2.png">
+</div>
+
+</div>
+
+</section>
+
+
+
+</section>
+
+
+<!-- EISENHOWER MATRIX -->
+
+<section class="case-container">
+
+<div class="case-title">Eisenhower Matrix</div>
+
+<div class="case-content">
+
+<div class="image-placeholder">
+<img src="images/ehm.png">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TASK FLOWS -->
+
+<section class="case-container">
+
+<div class="case-title">Task Flow</div>
+
+<div class="case-content">
+
+<p><strong>Scenario 1: Track and Mange emotion</strong></p>
+
+<div class="image-placeholder">
+<img src="images/task.png">
+</div>
+
+<p><strong>Scenario 2: Speak to Lora the Ai therapsist</strong></p>
+
+<div class="image-placeholder">
+<img src="images/task2.png">
+</div>
+
+</div>
+
+</section>
+<!-- QUANTITATIVE RESEARCH -->
+
+<section class="case-container">
+
+    <div class="case-title">Quantitative Research</div>
+  
+    <div class="case-content">
+  
+      <h3>Observations</h3>
+      <p><strong>Sample size:</strong> 4 users</p>
+  
+      <div class="observation">
+        <h4>75%</h4>
+        <p>(3/4) of users find existing apps too complicated to navigate.</p>
+      </div>
+  
+      <div class="observation">
+        <h4>100%</h4>
+        <p>(4/4) of users demand sessions under 5 minutes to fit busy schedules.</p>
+      </div>
+  
+      <div class="observation">
+        <h4>50%</h4>
+        <p>(2/4) of users struggle to see the "big picture" of their progress.</p>
+      </div>
+  
+      <h3>Needs vs. Calmora Features</h3>
+  
+      <div class="need-feature">
+        <p><strong>Need:</strong> Quick stress relief</p>
+        <p>→ Feature: "Tool Box" with 1-minute breathing exercises.</p>
+      </div>
+  
+      <div class="need-feature">
+        <p><strong>Need:</strong> Emotional clarity</p>
+        <p>→ Feature: "Manage Emotion" definitions and reflection prompts.</p>
+      </div>
+  
+      <div class="need-feature">
+        <p><strong>Need:</strong> Immediate support</p>
+        <p>→ Feature: 24/7 "Lora" AI Therapist for instant venting.</p>
+      </div>
+  
+    </div>
+  
+  </section>
+
+
+<!-- WIREFRAMES -->
+
+<section class="case-container">
+
+<div class="case-title">Wireframes</div>
+
+<div class="case-content">
+
+<div class="image-placeholder">
+<img src="images/wirefrae.png">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL SCREENS -->
+
+<section class="case-container">
+
+<div class="case-title">Final Screens</div>
+
+<div class="case-content">
+
+<div class="screen">
+
+<h3>Homepage</h3>
+
+<div class="image-placeholder">
+<img src="images/hp.png">
+</div>
+
+</div>
+
+<div class="screen">
+
+<h3>Task Manager</h3>
+
+<div class="image-placeholder">
+<img src="images/toolbox.png">
+</div>
+
+</div>
+
+<div class="screen">
+
+<h3>Progress Tracker</h3>
+
+<div class="image-placeholder">
+<img src="images/lora.png">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div>
+
+<a href="https://github.com/PrincessJessie-hue"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/ayanda-mthombeni-757810340/"><i class="fa-brands fa-linkedin"></i></a>
+<a href="contact.html">Contact Me</a>
+
+</div>
+
+<p>© 2026 Ayanda. Built by Ayanda.</p>
+
+</footer>
+
+</body>
+</html>
+
+
