@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Ayanda Mthombeni</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e49ab1;
+}
+
+/* HERO / HEADER */
+.hero {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CONTACT FORM */
+.contact-form-container {
+  background: #fff;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #e49ab1;
+  border-radius: 3px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e49ab1;
+  box-shadow: 0 4px 12px rgba(228,154,177,0.25);
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  background: #e49ab1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #d07c9b;
+  transform: translateY(-2px);
+}
+
+/* FORM LABEL ANIMATION */
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  background: #f3dde5;
+  padding: 40px 10%;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero {
+    padding: 60px 5%;
+  }
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="index.html" class="logo">Yanda</a>
+  <div class="nav-links">
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Get in Touch</h1>
+  <p>I’d love to hear from you! Whether it’s a collaboration, a project inquiry, or just a friendly hello, drop me a message and I’ll get back to you as soon as possible.</p>
+</section>
+
+<!-- CONTACT FORM -->
+<div class="contact-form-container">
+  <form class="contact-form" onsubmit="sendMessage(event)">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Ayanda</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+// Simple form submission animation
+function sendMessage(e) {
+  e.preventDefault();
+  const button = e.target.querySelector('button');
+  button.textContent = 'Sent! 💌';
+  button.disabled = true;
+
+  setTimeout(() => {
+    button.textContent = 'Send Message';
+    button.disabled = false;
+    e.target.reset();
+  }, 2000);
+}
+</script>
+
+</body>
+</html>
